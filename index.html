@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="js/BUtils1.0.1.1.js" type="text/javascript"></script>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style>
+  .center-div{
+    position: absolute;
+    margin: 0% 1% 0% 1%;
+    top: 8%;
+    right: 0;
+    bottom: 8%;
+    left: -1px;
+    width: 98%;
+    height: 84%;
+    background-color: #fff;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: #c448a8;
+    text-align: center;
+    border-width: 2px;
+  }
+  .close-button {
+    float: right;
+  }
+  #close {
+    position: absolute;
+    top: 10px;
+    right: 2vh;
+    height: 10%;
+  }
+  .text {
+      position: fixed;
+      margin: auto;
+      width: 100%;
+      top: 20%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body background="img/overlay.png">
+  <div class="center-div">
+      <div class="close-button">
+        <img src="img/close_button.png" alt="X" id="close">
+      </div>
+      <div class="text">
+<iframe width="400" height="500" src="https://www.youtube.com/embed/tjQdwIepkHs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+<script>
+  $("#close").click(function(){
+    Q(function(){
+			B.runCallApp('closeHtml', [this]);
+		});
+	});
+</script>
+</body>
+</html>
